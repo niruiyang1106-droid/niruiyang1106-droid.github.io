@@ -1,4 +1,4 @@
-/* ======= Base ======= */
+/* ===== GLOBAL ===== */
 body {
   font-family: "Open Sans", Arial, sans-serif;
   margin: 40px auto;
@@ -10,14 +10,14 @@ body {
   transition: all 0.3s ease;
 }
 
-/* ======= Headings ======= */
 h2 {
   border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
   font-size: 22px;
+  margin-top: 40px;
 }
 
-/* ======= Links ======= */
+/* ===== LINKS ===== */
 a {
   color: #007acc;
   text-decoration: none;
@@ -26,7 +26,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/*=====button=====*/
+/* ===== BUTTONS ===== */
 .btn {
   display: inline-block;
   padding: 8px 14px;
@@ -40,27 +40,13 @@ a:hover {
   background-color: #005fa3;
 }
 
-
-/* ======= Dark Mode (auto) ======= */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-    color: #ddd;
-  }
-  a { color: #4da3ff; }
-  h2 { border-color: #444; }
-  nav a.active {
-    background-color: #333;
-  }
-}
-
-/* ======= Header ======= */
+/* ===== HEADER ===== */
 header {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .profile {
   width: 130px;
@@ -76,8 +62,7 @@ header {
   margin: 4px 0;
 }
 
-
-/* ===== Education Section ===== */
+/* ===== EDUCATION ===== */
 .education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -95,46 +80,20 @@ header {
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
+/* 🧠 图片优化部分：缩小高度 + 显示完整比例 */
 .edu-img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: 120px;            /* 原来是150px，现在稍微缩小 */
+  object-fit: contain;      /* 从 cover 改为 contain，显示整张图片 */
+  background-color: #fff;   /* 防止 contain 时出现黑边 */
+  padding: 5px;
 }
 .edu-text {
   padding: 12px 16px;
 }
 
-/* dark mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-    color: #ddd;
-  }
-  .edu-card, .project-card {
-    background-color: #1e1e1e;
-    border-color: #444;
-  }
-  h2 { border-color: #333; }
-  a { color: #4da3ff; }
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-  .profile {
-    width: 100px;
-    height: 100px;
-  }
-  .edu-img, .project-img {
-    height: 130px;
-  }
-}
-
-
-/* ======= Project Cards ======= */
+/* ===== PROJECTS ===== */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -152,11 +111,16 @@ header {
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
+/* 🧠 项目图优化：显示全图 + 适度缩小 */
 .project-img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 160px;            /* 原来180px，现在略小 */
+  object-fit: contain;      /* 显示完整内容，不被裁切 */
+  background-color: #fff;
+  padding: 5px;
 }
+
 .project-text {
   padding: 12px 16px;
 }
@@ -168,7 +132,32 @@ header {
   text-decoration: underline;
 }
 
-/* ======= Responsive Design ======= */
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;       /* ✅ 居中显示 */
+  font-size: 14px;
+  color: #666;
+  margin-top: 50px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+/* ===== DARK MODE ===== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ddd;
+  }
+  .edu-card, .project-card {
+    background-color: #1e1e1e;
+    border-color: #444;
+  }
+  h2 { border-color: #333; }
+  a { color: #4da3ff; }
+  footer { color: #aaa; border-color: #333; }
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
   header {
     flex-direction: column;
@@ -178,97 +167,8 @@ header {
     width: 100px;
     height: 100px;
   }
-}
-
-/* ======= Education & Projects Shared Layout ======= */
-.education-grid, .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
-}
-
-/* ======= Education Cards ======= */
-.edu-card {
-  background-color: #fafafa;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.edu-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-.edu-img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-.edu-text {
-  padding: 12px 16px;
-}
-.edu-text h3 {
-  margin-bottom: 6px;
-  font-size: 20px;
-}
-.edu-text p {
-  margin: 4px 0;
-}
-
-/* ======= Project Cards ======= */
-.project-card {
-  background-color: #fefefe;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-.project-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-.project-text {
-  padding: 12px 16px;
-}
-.project-text h3 {
-  margin-bottom: 6px;
-  font-size: 20px;
-}
-.project-text p {
-  margin: 4px 0 8px 0;
-}
-.project-link {
-  color: #007acc;
-  font-weight: 600;
-  text-decoration: none;
-}
-.project-link:hover {
-  text-decoration: underline;
-}
-
-/* ======= Dark Mode ======= */
-@media (prefers-color-scheme: dark) {
-  .edu-card, .project-card {
-    background-color: #1e1e1e;
-    border-color: #444;
-  }
-  .edu-text h3, .edu-text p, .project-text h3, .project-text p {
-    color: #ddd;
-  }
-  .project-link {
-    color: #4da3ff;
-  }
-}
-
-/* ======= Mobile Optimization ======= */
-@media (max-width: 600px) {
   .edu-img, .project-img {
-    height: 150px;
+    height: 120px;
   }
 }
+
