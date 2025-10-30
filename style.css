@@ -1,4 +1,4 @@
-/* ========== Global Settings ========== */
+/* ======= Base ======= */
 body {
   font-family: "Open Sans", Arial, sans-serif;
   margin: 40px auto;
@@ -6,9 +6,24 @@ body {
   line-height: 1.7;
   color: #222;
   background-color: #fff;
+  padding: 0 20px;
+  transition: all 0.3s ease;
 }
 
-/* ========== Links ========== */
+/* ======= Dark Mode (auto) ======= */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ddd;
+  }
+  a { color: #4da3ff; }
+  h2 { border-color: #444; }
+  nav a.active {
+    background-color: #333;
+  }
+}
+
+/* ======= Links ======= */
 a {
   color: #007acc;
   text-decoration: none;
@@ -17,12 +32,13 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ========== Header ========== */
+/* ======= Header ======= */
 header {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .profile {
   width: 130px;
@@ -38,14 +54,41 @@ header {
   margin: 4px 0;
 }
 
-/* ========== Section Headings ========== */
+/* ======= Navigation ======= */
+nav {
+  text-align: center;
+  margin: 15px 0 30px;
+}
+nav a {
+  display: inline-block;
+  padding: 8px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  color: #007acc;
+  font-weight: 500;
+}
+nav a.active {
+  background-color: #f0f0f0;
+}
+@media (prefers-color-scheme: dark) {
+  nav a.active {
+    background-color: #333;
+  }
+}
+
+/* ======= Headings ======= */
 h2 {
   border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
   font-size: 22px;
 }
 
-/* ========== Project Cards ========== */
+/* ======= Sections ======= */
+section {
+  margin-bottom: 35px;
+}
+
+/* ======= Project Cards ======= */
 .project {
   margin-bottom: 25px;
 }
@@ -58,10 +101,23 @@ h2 {
   color: #007acc;
 }
 
-/* ========== Footer ========== */
+/* ======= Footer ======= */
 footer {
   text-align: center;
   font-size: 14px;
   color: #666;
   margin-top: 40px;
 }
+
+/* ======= Responsive Design ======= */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile {
+    width: 100px;
+    height: 100px;
+  }
+}
+
