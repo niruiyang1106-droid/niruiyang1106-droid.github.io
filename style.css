@@ -81,12 +81,11 @@ header {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* 🧠 图片优化部分：缩小高度 + 显示完整比例 */
 .edu-img {
   width: 100%;
-  height: 120px;            /* 原来是150px，现在稍微缩小 */
-  object-fit: contain;      /* 从 cover 改为 contain，显示整张图片 */
-  background-color: #fff;   /* 防止 contain 时出现黑边 */
+  height: 120px;           
+  object-fit: contain;      
+  background-color: #fff;  
   padding: 5px;
 }
 .edu-text {
@@ -112,11 +111,10 @@ header {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* 🧠 项目图优化：显示全图 + 适度缩小 */
 .project-img {
   width: 100%;
-  height: 160px;            /* 原来180px，现在略小 */
-  object-fit: contain;      /* 显示完整内容，不被裁切 */
+  height: 160px;          
+  object-fit: contain;      
   background-color: #fff;
   padding: 5px;
 }
@@ -134,7 +132,7 @@ header {
 
 /* ===== FOOTER ===== */
 footer {
-  text-align: center;       /* ✅ 居中显示 */
+  text-align: center;  
   font-size: 14px;
   color: #666;
   margin-top: 50px;
