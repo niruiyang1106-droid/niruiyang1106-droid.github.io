@@ -1,0 +1,278 @@
+/* ===== Base ===== */
+:root {
+  --primary: #2c3e50;
+  --accent: #2980b9;
+  --accent-light: #3498db;
+  --bg: #fafafa;
+  --card-bg: #ffffff;
+  --text: #333333;
+  --text-light: #666666;
+  --border: #e0e0e0;
+  --shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --radius: 8px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover { color: var(--accent-light); text-decoration: underline; }
+
+/* ===== Layout ===== */
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Header / Profile ===== */
+.profile-header {
+  background: linear-gradient(135deg, var(--primary) 0%, #34495e 100%);
+  color: #fff;
+  padding: 50px 0 40px;
+  text-align: center;
+}
+
+.profile-header .avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.3);
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+
+.profile-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.profile-header .subtitle {
+  font-size: 1.05rem;
+  opacity: 0.85;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.profile-header .affiliation {
+  font-size: 0.92rem;
+  opacity: 0.7;
+}
+
+.profile-header .contact-links {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.profile-header .contact-links a {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+.profile-header .contact-links a:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.6);
+  text-decoration: none;
+}
+
+/* ===== Sections ===== */
+.section {
+  background: var(--card-bg);
+  margin: 24px auto;
+  padding: 32px 36px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title .icon {
+  font-size: 1.2rem;
+}
+
+/* ===== About ===== */
+.about-text p { margin-bottom: 10px; }
+
+/* ===== Research Interests ===== */
+.interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+.interests-list li {
+  background: #eaf2f8;
+  color: var(--accent);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ===== Education ===== */
+.edu-item {
+  margin-bottom: 18px;
+  padding-left: 16px;
+  border-left: 3px solid var(--accent);
+}
+.edu-item:last-child { margin-bottom: 0; }
+.edu-item .school {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--primary);
+}
+.edu-item .degree {
+  color: var(--accent);
+  font-weight: 500;
+  margin: 2px 0;
+}
+.edu-item .date { color: var(--text-light); font-size: 0.88rem; }
+.edu-item .note { color: var(--text-light); font-size: 0.9rem; }
+
+/* ===== Projects ===== */
+.project-card {
+  margin-bottom: 24px;
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: box-shadow 0.2s;
+}
+.project-card:hover { box-shadow: var(--shadow); }
+.project-card:last-child { margin-bottom: 0; }
+
+.project-card .proj-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.project-card .proj-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--primary);
+}
+.project-card .proj-date {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  background: #f0f0f0;
+  padding: 2px 10px;
+  border-radius: 12px;
+}
+.project-card .proj-outcome {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.project-card ul {
+  margin-left: 18px;
+  margin-bottom: 10px;
+}
+.project-card li {
+  font-size: 0.92rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.project-card .proj-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.project-card .proj-tech span {
+  font-size: 0.78rem;
+  background: #f5f5f5;
+  color: var(--text-light);
+  padding: 2px 10px;
+  border-radius: 10px;
+  border: 1px solid #e8e8e8;
+}
+.project-card .proj-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.project-card .proj-links a {
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+/* ===== Awards ===== */
+.award-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.award-item:last-child { border-bottom: none; }
+.award-item .award-name { font-weight: 600; color: var(--primary); }
+.award-item .award-date { font-size: 0.85rem; color: var(--text-light); }
+
+/* ===== Skills ===== */
+.skills-group { margin-bottom: 14px; }
+.skills-group:last-child { margin-bottom: 0; }
+.skills-group .skill-cat {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+.skills-group .skill-items {
+  color: var(--text-light);
+  font-size: 0.92rem;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 24px 20px 32px;
+  color: var(--text-light);
+  font-size: 0.82rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .profile-header { padding: 32px 0 28px; }
+  .profile-header h1 { font-size: 1.5rem; }
+  .section { padding: 20px 18px; margin: 14px auto; }
+  .project-card { padding: 14px 16px; }
+}

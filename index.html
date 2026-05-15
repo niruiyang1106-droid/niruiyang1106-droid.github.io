@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruiyang Ni - Academic Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ===== Profile Header ===== -->
+<header class="profile-header">
+  <div class="container">
+    <img src="assets/img/Selfie.jpg" alt="Ruiyang Ni" class="avatar">
+    <h1>Ruiyang Ni</h1>
+    <p class="subtitle">MSc Robotics Graduate Student</p>
+    <p class="affiliation">School of Engineering, The University of Manchester</p>
+    <div class="contact-links">
+      <a href="mailto:ruiyang.ni@postgrad.manchester.ac.uk">&#9993; Email</a>
+      <a href="https://github.com/niruiyang1106-droid" target="_blank">&#9000; GitHub</a>
+      <a href="assets/files/CV.pdf" target="_blank">&#128196; CV</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== About Me ===== -->
+<section class="section container">
+  <h2 class="section-title"><span class="icon">&#128100;</span> About Me</h2>
+  <div class="about-text">
+    <p>
+      I am an MSc Robotics student at the University of Manchester, passionate about building intelligent
+      systems that bridge the gap between hardware and software. My background spans power electronics,
+      embedded systems, and autonomous robotics, giving me a strong foundation in both the theoretical
+      and practical aspects of engineering.
+    </p>
+    <p>
+      I enjoy tackling complex, multi-disciplinary challenges — from designing high-frequency power
+      converters to programming autonomous mobile manipulators. My goal is to pursue a career in
+      robotics or embedded systems engineering, where I can apply my skills to develop innovative
+      and reliable real-world solutions.
+    </p>
+  </div>
+</section>
+
+<!-- ===== Research Interests ===== -->
+<section class="section container">
+  <h2 class="section-title"><span class="icon">&#128269;</span> Research Interests</h2>
+  <ul class="interests-list">
+    <li>Power Electronics</li>
+    <li>Embedded Systems</li>
+    <li>Autonomous Robotics</li>
+    <li>Robot Perception &amp; Manipulation</li>
+    <li>Condition Monitoring</li>
+    <li>Control Systems</li>
+  </ul>
+</section>
+
+<!-- ===== Education ===== -->
+<section class="section container">
+  <h2 class="section-title"><span class="icon">&#127891;</span> Education</h2>
+
+  <div class="edu-item">
+    <div class="school">The University of Manchester</div>
+    <div class="degree">MSc Robotics</div>
+    <div class="date">September 2025 – December 2026</div>
+    <div class="note">Core modules: Robotic Systems Design, Robot Dynamics, Autonomous Robots, Robot Vision, Machine Learning</div>
+  </div>
+
+  <div class="edu-item">
+    <div class="school">Hebei University of Technology</div>
+    <div class="degree">BEng Electronic Science and Technology</div>
+    <div class="date">September 2021 – July 2025</div>
+    <div class="note">Overall average: 70.5% &bull; Core modules: Power Electronics, Electrical Machines, Digital Electronics, Embedded Computer Systems, Engineering Mathematics</div>
+  </div>
+</section>
+
+<!-- ===== Research & Projects ===== -->
+<section class="section container">
+  <h2 class="section-title"><span class="icon">&#128736;</span> Research &amp; Engineering Projects</h2>
+
+  <!-- Project 1: Leo Rover -->
+  <div class="project-card">
+    <div class="proj-header">
+      <span class="proj-title">Autonomous Mobile Manipulation System Based on Leo Rover</span>
+      <span class="proj-date">Oct 2025 – Apr 2026</span>
+    </div>
+    <div class="proj-outcome">A fully integrated autonomous robot system for navigation, object detection, grasping, and sorting</div>
+    <ul>
+      <li>Developed an autonomous robotic system on the Leo Rover platform combining mobile navigation with a myCobot manipulator for pick-and-place tasks</li>
+      <li>Implemented A* path planning algorithm with dynamic obstacle avoidance for global navigation in unknown environments</li>
+      <li>Built a perception-manipulation pipeline using MoveIt2 for motion planning and accurate target grasping, with integrated placement and sorting capabilities</li>
+      <li>Designed a Finite State Machine (FSM) task orchestration framework in ROS2, managing transitions between autonomous navigation, target detection, grasping, sorting, and placement subtasks</li>
+    </ul>
+    <div class="proj-tech">
+      <span>ROS2</span><span>Python</span><span>C++</span><span>MoveIt2</span><span>A* Algorithm</span><span>FSM</span>
+    </div>
+    <div class="proj-links">
+      <a href="https://github.com/niruiyang1106-droid" target="_blank">GitHub &#8599;</a>
+    </div>
+  </div>
+
+  <!-- Project 2: Data-Driven Condition Monitoring -->
+  <div class="project-card">
+    <div class="proj-header">
+      <span class="proj-title">Data-Driven Condition Monitoring for Power Electronic Converters</span>
+      <span class="proj-date">Jul 2024 – Apr 2025</span>
+    </div>
+    <div class="proj-outcome">BEng Final Year Project — applying machine learning methods to fault diagnosis in power electronics</div>
+    <ul>
+      <li>Focused on a DC-DC buck converter as the experimental target, achieving condition monitoring under limited external sensing conditions using data-driven approaches</li>
+      <li>Conducted power loss analysis and developed a data-driven model using a fourth-order Runge-Kutta method, covering power devices, magnetics, and control ICs</li>
+      <li>Validated the model against a real buck converter using MATLAB/Simulink co-simulation, demonstrating high correlation between simulated and experimental waveforms</li>
+      <li>Applied Particle Swarm Optimisation (PSO) to estimate key component parameters (capacitor and MOSFET), enabling fault prediction through parameter degradation tracking</li>
+    </ul>
+    <div class="proj-tech">
+      <span>MATLAB</span><span>Simulink</span><span>PSO</span><span>PLECS</span><span>Condition Monitoring</span>
+    </div>
+  </div>
+
+  <!-- Project 3: STM32 Self-Balancing Vehicle -->
+  <div class="project-card">
+    <div class="proj-header">
+      <span class="proj-title">Embedded Control System for STM32-Based Self-Balancing Vehicle</span>
+      <span class="proj-date">Oct 2022 – Dec 2022</span>
+    </div>
+    <div class="proj-outcome">A fully functional self-balancing two-wheeled robot with real-time stabilisation and tracking</div>
+    <ul>
+      <li>Developed a complete embedded control system on the STM32 platform enabling autonomous balancing and stable navigation on predefined trajectories</li>
+      <li>Implemented PWM-based motor speed control with differential drive for steering, using encoder feedback and PID control for closed-loop stabilisation</li>
+      <li>Designed a multi-stage track sensing module using infrared sensors for surface detection, with signal processing and threshold decision logic</li>
+    </ul>
+    <div class="proj-tech">
+      <span>STM32</span><span>C</span><span>PID Control</span><span>PWM</span><span>Embedded Systems</span><span>Sensor Fusion</span>
+    </div>
+  </div>
+
+  <!-- Project 4: EBG Antenna -->
+  <div class="project-card">
+    <div class="proj-header">
+      <span class="proj-title">Miniaturised Dual-Band Wearable Antenna Using EBG Structures</span>
+      <span class="proj-date">Jun 2022 – Sep 2022</span>
+    </div>
+    <div class="proj-outcome">Designed a compact wearable antenna optimised for ISM-band wireless body area network applications</div>
+    <ul>
+      <li>Integrated a planar antenna with an Electromagnetic Band-Gap (EBG) structure to improve communication performance and wearability for indoor/outdoor wireless body area networks</li>
+      <li>Used EBG unit cells as both inductive and capacitive elements to construct an artificial magnetic conductor (AMC) surface, suppressing surface waves and reducing body-absorption effects</li>
+      <li>Modelled and optimised the EBG-backed antenna unit cell in CST Microwave Studio, achieving high radiation efficiency at 2.45 GHz under body-proximity conditions</li>
+    </ul>
+    <div class="proj-tech">
+      <span>CST Microwave Studio</span><span>EBG</span><span>Antenna Design</span><span>Electromagnetics</span>
+    </div>
+  </div>
+
+  <!-- Project 5: DAB Converter -->
+  <div class="project-card">
+    <div class="proj-header">
+      <span class="proj-title">1 kW Bidirectional Dual Active Bridge (DAB) DC-DC Converter Design</span>
+      <span class="proj-date">Jul 2024</span>
+    </div>
+    <div class="proj-outcome">Award-winning power converter design achieving high-efficiency galvanically isolated bidirectional energy transfer</div>
+    <ul>
+      <li>Designed and built a 1 kW DAB DC-DC converter (36–60 Vdc input, 400 Vdc output) using single phase-shift modulation and output voltage feedback control</li>
+      <li>Selected high-frequency transformer topology with optimised turns ratio and winding configuration to achieve galvanic isolation and high power density</li>
+      <li>Designed isolated voltage/current sensing circuits with appropriate bandwidth and ADC interface for precise closed-loop control</li>
+      <li>Developed a MATLAB/PLECS co-simulation model to analyse converter behaviour under varying load conditions, validating component sizing, control strategy, and soft-switching performance</li>
+    </ul>
+    <div class="proj-tech">
+      <span>MATLAB</span><span>PLECS</span><span>Power Electronics</span><span>DAB Converter</span><span>Control Systems</span>
+    </div>
+    <div class="proj-links">
+      <a href="assets/files/Award_Certificate.pdf" target="_blank">Award Certificate &#8599;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Awards ===== -->
+<section class="section container">
+  <h2 class="section-title"><span class="icon">&#127942;</span> Awards &amp; Honours</h2>
+  <div class="award-item">
+    <span class="award-name">National Undergraduate Electronics Design Competition — Award Recipient</span>
+    <span class="award-date">2024</span>
+  </div>
+  <div style="margin-top: 12px;">
+    <a href="assets/files/Award_Certificate.pdf" target="_blank" style="font-size: 0.9rem;">View Award Certificate &#8599;</a>
+  </div>
+</section>
+
+<!-- ===== Technical Skills ===== -->
+<section class="section container">
+  <h2 class="section-title"><span class="icon">&#128295;</span> Technical Skills</h2>
+
+  <div class="skills-group">
+    <div class="skill-cat">Programming Languages</div>
+    <div class="skill-items">Python, C/C++, MATLAB</div>
+  </div>
+
+  <div class="skills-group">
+    <div class="skill-cat">Robotics &amp; Frameworks</div>
+    <div class="skill-items">ROS2, MoveIt2, Gazebo, RViz</div>
+  </div>
+
+  <div class="skills-group">
+    <div class="skill-cat">Simulation &amp; Modelling</div>
+    <div class="skill-items">MATLAB/Simulink, PLECS, LTspice, CST Microwave Studio, Quartus</div>
+  </div>
+
+  <div class="skills-group">
+    <div class="skill-cat">Embedded Systems</div>
+    <div class="skill-items">STM32, PWM, PID Control, Sensor Integration, ADC/DAC</div>
+  </div>
+
+  <div class="skills-group">
+    <div class="skill-cat">Languages</div>
+    <div class="skill-items">English: IELTS 7.0 (L:7.0, R:7.5, W:6.5, S:6.0) &bull; Chinese: Native</div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 Ruiyang Ni. Built with HTML &amp; CSS. Hosted on GitHub Pages.</p>
+  </div>
+</footer>
+
+</body>
+</html>
