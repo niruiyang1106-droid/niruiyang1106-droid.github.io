@@ -1,132 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruiyang Ni | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ruiyang Ni is an MSc Robotics student at the University of Manchester, working on robotics, dynamics, simulation, and safe control.">
+  <title>Ruiyang Ni | Robotics Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- ====== Header ====== -->
-  <header>
-    <img src="images/profile.jpg" alt="Profile" class="profile">
-    <div class="intro">
-      <h1>Ruiyang Ni</h1>
-      <p>MSc Robotics | University of Manchester</p>
-      <p>BEng Electronic Science and Technology | Xi'an Jiao-tong Liverpool University</p>
-      <p>Email: niruiyang.1106@gmail.com</p>
-      <p>
-        <a href="https://github.com/niruiyang1106-droid">GitHub</a> |
-        <a href="https://www.linkedin.com/in/ruiyang-ni-b5ba17386/">LinkedIn</a> |
-        <a href="CV-Ruiyang NI.pdf">CV</a>
-      </p>
-    </div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ruiyang Ni home">RN<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a class="active" href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="projects.html">Projects</a>
-  </nav>
-
-  <section>
-    <h2>About Me</h2>
-    <p>
-      My background is rooted in the 'hardware layer' of technology—my undergraduate degree 
-      was in Electronic Science and Technology, where I learned how things are built from the 
-      circuit level up. I currently pursue a Master's in Robotics at Manchester to understand 
-      how to make these systems intelligent and autonomous.
-    </p>
-  </section>
-
-  <!-- ====== Education Section ====== -->
-<section>
-  <h2>Education</h2>
-
-  <div class="education-grid">
-    
-    <div class="edu-card">
-      <img src="images/UoM.jpg" alt="The University of Manchester" class="edu-img">
-      <div class="edu-text">
-        <h3>University of Manchester</h3>
-        <p>MSc Robotics (2025 – 2026)</p>
-        <p>Focus on autonomous systems, computer vision, and control engineering.</p>
-      </div>
-    </div>
-    
-    <div class="edu-card">
-      <img src="images/XJTLU.jpg" alt="Xi'an Jiao-tong Liverpool University" class="edu-img">
-      <div class="edu-text">
-        <h3>Xi'an Jiao-tong Liverpool University</h3>
-        <p>BEng Electronic Science and Technology (2021 – 2025)</p>
-        <p>Graduated with First Class Honours. Coursework in electronic engineering, digital twin, power electronic converters.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Programming Skill: Python / C / C++</li>
-      <li>Simulation Software: MATLAB & PLECS & LTspice & CST</li>
-      <li>Machine Learning</li>
-    </ul>
-  </section>
-
-  <!-- ====== Featured Projects Section ====== -->
-<section>
-  <h2>Featured Projects</h2>
-
-  <div class="project-grid">
-
-    <!-- 🤖 Project 1 -->
-    <div class="project-card">
-      <img src="images/digital_twin.png" alt="Digital Twin Project" class="project-img">
-      <div class="project-text">
-        <h3>Digital Twin – Condition Monitoring of Power Electronic Converters</h3>
-        <p>
-          This project proposes a health indicatorestimation method based on the digital-twin concept aiming for condition 
-          monitoring of powerelectronic converters. The method is noninvasive, without additional hardware circuits, and calibration 
-          requirements. Anapplication for a buck dc–dc converter is demonstrated with theoretical analyses, practical considerations,
-          and experimental verifications. The digital replica of an experimental prototype is established, which includes the power
-          stage, sampling circuit, and close-loop controller. Particle swarm optimization algorithm is applied to estimate the unknown
-          circuit parameters of interest based on the incoming data from both the digital twin and the physical prototype. The outcomes 
-          of this project serve as a key step for achieving noninvasive, cost-effective, and robust condition monitoring for power
-          electronic converters.
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Robotics · Dynamics · Safe Control</p>
+        <h1 id="hero-title">Hi, I'm Ruiyang Ni.<br><span>I build robots that move with purpose.</span></h1>
+        <p class="hero-lede">
+          MSc Robotics student at the University of Manchester with a background in electronic engineering.
+          I work across robot dynamics, simulation, motion planning, and autonomous systems.
         </p>
+        <div class="actions">
+          <a class="button primary" href="projects.html">Explore my work</a>
+          <a class="button secondary" href="CV-Ruiyang NI.pdf" target="_blank" rel="noopener">View CV <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="quick-facts" aria-label="Profile highlights">
+          <div><strong>MSc Robotics</strong><span>University of Manchester</span></div>
+          <div><strong>First-Class BEng</strong><span>GPA 3.7 / 4.0</span></div>
+          <div><strong>IELTS 7.0</strong><span>English C1</span></div>
+        </div>
       </div>
-    </div>
-
-    <!-- 🦾 Project 2 -->
-    <div class="project-card">
-      <img src="images/DAB.png" alt="Dual-Active Bridge DC-DC Converter" class="project-img">
-      <div class="project-text">
-        <h3>Dual-Active Bridge DC-DC Converter</h3>
-        <p>
-          This project designs a high-efficiency, miniaturized DC-DC converter. By adopting pulse width modulation (PWM) technology,
-          digital control strategies, optimized magnetic component design, and efficient thermal management, the converter significantly
-          improves energy conversion efficiency. In addition, cost control and reliability design ensure the product’s economic viability
-          and stability across various applications. The converter is not only suitable for portable devices and electric vehicles but
-          can also be widely applied in other fields that require efficient power conversion.
-        </p>
+      <div class="portrait-wrap">
+        <div class="portrait-backdrop"></div>
+        <img src="images/profile.jpg" alt="Portrait of Ruiyang Ni" class="portrait">
+        <p class="availability"><span></span> Open to robotics opportunities</p>
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <section class="section" aria-labelledby="focus-title">
+      <div class="section-heading">
+        <p class="eyebrow">Current focus</p>
+        <h2 id="focus-title">Human–exoskeleton dynamics</h2>
+      </div>
+      <article class="feature-card">
+        <div class="feature-meta">
+          <p class="date">May – Aug 2026</p>
+          <p class="role">Project Researcher</p>
+        </div>
+        <div class="feature-content">
+          <h3>Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences</h3>
+          <p>
+            Developing and validating a personalized rigid–flexible coupled dynamics model for a human–exoskeleton system.
+            The work combines a 30-subject virtual cohort, OpenSim and MATLAB co-simulation, compliant contact modelling,
+            and high-fidelity validation in MuJoCo.
+          </p>
+          <ul class="tag-list" aria-label="Technologies used">
+            <li>MATLAB</li><li>OpenSim</li><li>MuJoCo</li><li>Dynamics</li><li>Biomechanics</li>
+          </ul>
+        </div>
+      </article>
+    </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>
-      Feel free to reach out for collaborations or opportunities in robotics and electronic engineering.
-    </p>
-  </section>
+    <section class="section" aria-labelledby="education-title">
+      <div class="section-heading split-heading">
+        <div><p class="eyebrow">Education</p><h2 id="education-title">Engineering foundations, robotics direction.</h2></div>
+        <p>From circuit-level thinking to intelligent autonomous systems.</p>
+      </div>
+      <div class="education-list">
+        <article class="education-card">
+          <img src="images/UoM.jpg" alt="University of Manchester logo">
+          <div><p class="date">2025 – 2026</p><h3>University of Manchester</h3><p>MSc Robotics · Current student</p></div>
+          <p class="coursework">Robot Systems · Robot Software · Robot Automation · Robot Vision · Reinforcement Learning</p>
+        </article>
+        <article class="education-card">
+          <img src="images/XJTLU.jpg" alt="Xi'an Jiaotong-Liverpool University logo">
+          <div><p class="date">2021 – 2025</p><h3>Xi'an Jiaotong-Liverpool University</h3><p>BEng Electronic Science and Technology · First-Class Honours</p></div>
+          <p class="coursework">GPA 3.7 / 4.0 · Provincial Third Prize, Electrical &amp; Electronic Engineering Innovation Competition</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="projects-title">
+      <div class="section-heading split-heading">
+        <div><p class="eyebrow">Selected projects</p><h2 id="projects-title">Systems built from model to motion.</h2></div>
+        <a class="text-link" href="projects.html">View all projects <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="project-preview-grid">
+        <a class="project-preview accent-blue" href="projects.html#hexapod">
+          <p class="project-number">01</p><h3>18-DoF Hexapod Locomotion</h3>
+          <p>Whole-body kinematics, tripod gait, terrain adaptation, and safety-critical control.</p>
+          <span>Python · CoppeliaSim · CBF/QP</span>
+        </a>
+        <a class="project-preview accent-green" href="projects.html#leo-rover">
+          <p class="project-number">02</p><h3>Autonomous Mobile Manipulator</h3>
+          <p>Integrated navigation, perception, manipulation, and task-level autonomy on Leo Rover.</p>
+          <span>ROS2 · Nav2 · MoveIt2 · FSM</span>
+        </a>
+        <a class="project-preview accent-orange" href="projects.html#digital-twin">
+          <p class="project-number">03</p><h3>Power Converter Digital Twin</h3>
+          <p>Non-invasive condition monitoring and component degradation prediction.</p>
+          <span>MATLAB/Simulink · PSO · PLECS</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section skills-section" aria-labelledby="skills-title">
+      <div class="section-heading"><p class="eyebrow">Toolkit</p><h2 id="skills-title">What I work with</h2></div>
+      <div class="skills-grid">
+        <div><h3>Programming</h3><p>Python · C · C++</p></div>
+        <div><h3>Robotics</h3><p>ROS2 · FSM · PID · Nav2 · MoveIt2</p></div>
+        <div><h3>Simulation</h3><p>CoppeliaSim · OpenSim · MuJoCo · Gazebo</p></div>
+        <div><h3>Engineering</h3><p>MATLAB/Simulink · PLECS · System Modelling</p></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Let's connect</p>
+      <h2 id="contact-title">Interested in robotics, autonomy, or simulation?</h2>
+      <p>I'm always happy to discuss research, engineering projects, and new opportunities.</p>
+      <div class="actions">
+        <a class="button primary" href="mailto:rui_yang_1106@163.com">Email me</a>
+        <a class="button secondary" href="https://github.com/niruiyang1106-droid" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+        <a class="button secondary" href="https://www.linkedin.com/in/ruiyang-ni-b5ba17386/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Ruiyang Ni | Hosted on GitHub Pages</p>
+    <p>© 2026 Ruiyang Ni</p>
+    <p>Designed for curiosity. Built on GitHub Pages.</p>
   </footer>
 </body>
 </html>
-
-
